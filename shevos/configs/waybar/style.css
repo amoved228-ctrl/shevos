@@ -1,0 +1,23 @@
+* {
+  font-family: "Noto Sans", "Noto Color Emoji", sans-serif;
+  font-size: 13px;
+}
+
+window#waybar {
+  background: rgba(15, 23, 42, 0.92);
+  color: #e5e7eb;
+  border-bottom: 1px solid rgba(56, 189, 248, 0.35);
+}
+
+#workspaces button {
+  color: #94a3b8;
+  padding: 0 8px;
+}
+
+#workspaces button.active {
+  color: #38bdf8;
+}
+
+#clock, #network, #pulseaudio, #battery, #tray {
+  padding: 0 10px;
+}

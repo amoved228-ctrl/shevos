@@ -1,0 +1,171 @@
+# ----------------------------
+# ShevOS packages.x86_64
+# Один пакет на строку. Комментарии и пустые строки разрешены.
+# ----------------------------
+
+# База live/install системы
+base
+linux
+linux-firmware
+linux-headers
+mkinitcpio
+mkinitcpio-archiso
+arch-install-scripts
+pacman
+pacman-contrib
+sudo
+nano
+vim
+git
+base-devel
+bash-completion
+man-db
+man-pages
+texinfo
+
+# Загрузка и файловые системы
+grub
+efibootmgr
+os-prober
+dosfstools
+mtools
+e2fsprogs
+btrfs-progs
+xfsprogs
+f2fs-tools
+exfatprogs
+ntfs-3g
+parted
+gptfdisk
+lvm2
+cryptsetup
+squashfs-tools
+
+# Микрокоды и железо
+amd-ucode
+intel-ucode
+sof-firmware
+alsa-firmware
+mesa
+vulkan-radeon
+vulkan-intel
+vulkan-nouveau
+libva-mesa-driver
+intel-media-driver
+xf86-video-amdgpu
+
+# Виртуалки и тестирование
+qemu-guest-agent
+virtualbox-guest-utils-nox
+open-vm-tools
+
+# Сеть: nmtui входит в networkmanager
+networkmanager
+network-manager-applet
+iwd
+wpa_supplicant
+wireless-regdb
+modemmanager
+bluez
+bluez-utils
+blueberry
+
+# Графическая среда Wayland / Hyprland
+hyprland
+xdg-desktop-portal
+xdg-desktop-portal-hyprland
+xdg-desktop-portal-gtk
+sddm
+qt5-wayland
+qt6-wayland
+qt5ct
+qt6ct
+waybar
+rofi
+wofi
+kitty
+thunar
+thunar-archive-plugin
+gvfs
+gvfs-mtp
+tumbler
+file-roller
+xdg-user-dirs
+xdg-utils
+
+# Политики, уведомления, буфер, скриншоты
+polkit
+polkit-gnome
+hyprpolkitagent
+libnotify
+dunst
+wl-clipboard
+cliphist
+grim
+slurp
+swappy
+brightnessctl
+playerctl
+pamixer
+pavucontrol
+pipewire
+pipewire-pulse
+pipewire-alsa
+pipewire-jack
+wireplumber
+
+# Браузер и пользовательские программы
+firefox
+fastfetch
+btop
+htop
+neofetch
+wget
+curl
+rsync
+unzip
+zip
+p7zip
+unrar
+tar
+gzip
+xz
+zstd
+jq
+yq
+ripgrep
+fd
+less
+lsof
+strace
+tcpdump
+nmap
+usbutils
+pciutils
+dmidecode
+smartmontools
+nvme-cli
+
+# Шрифты и кириллица
+ttf-dejavu
+ttf-liberation
+noto-fonts
+noto-fonts-cjk
+noto-fonts-emoji
+noto-fonts-extra
+terminus-font
+
+# Темизация
+papirus-icon-theme
+adwaita-icon-theme
+breeze-icons
+breeze
+adw-gtk-theme
+kvantum
+kvantum-qt5
+matugen
+quickshell
+
+# Calamares: в официальном Arch чаще всего отсутствует, поэтому должен лежать в shevos-local.
+# Собери его через scripts/build-localrepo-calamares.sh перед сборкой ISO.
+calamares

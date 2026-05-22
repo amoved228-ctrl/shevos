@@ -1,0 +1,26 @@
+---
+componentName: shevos
+strings:
+    productName:         "ShevOS"
+    shortProductName:    "ShevOS"
+    version:             "Rolling"
+    shortVersion:        "Rolling"
+    versionedName:       "ShevOS Rolling"
+    shortVersionedName:  "ShevOS"
+    bootloaderEntryName: "ShevOS"
+    productUrl:          "https://example.local"
+    supportUrl:          "https://example.local/support"
+    knownIssuesUrl:      "https://example.local/issues"
+    releaseNotesUrl:     "https://example.local/release-notes"
+
+images:
+    productLogo:         "logo.png"
+    productIcon:         "logo.png"
+    productWelcome:      "welcome.png"
+
+slideshow:               "show.qml"
+style:
+   sidebarBackground:    "#111827"
+   sidebarText:          "#e5e7eb"
+   sidebarTextSelect:    "#ffffff"
+   sidebarTextHighlight: "#38bdf8"

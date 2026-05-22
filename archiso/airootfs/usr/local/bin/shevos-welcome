@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+cat <<'EOF'
+Добро пожаловать в ShevOS Live.
+
+Полезные команды:
+  nmtui                      # подключение к Wi-Fi в терминале
+  sudo systemctl restart NetworkManager
+  launch-calamares           # запуск установщика
+  fastfetch                  # сведения о системе
+EOF

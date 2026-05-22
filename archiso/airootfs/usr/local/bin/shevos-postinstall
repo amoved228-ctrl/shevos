@@ -1,0 +1,41 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Этот скрипт запускается Calamares внутри установленной системы.
+# Никаких curl | sh. Только локальные настройки.
+
+echo "[ShevOS] Настройка локали..."
+sed -i 's/^#\(ru_RU.UTF-8 UTF-8\)/\1/' /etc/locale.gen || true
+sed -i 's/^#\(en_US.UTF-8 UTF-8\)/\1/' /etc/locale.gen || true
+locale-gen
+cat > /etc/locale.conf <<'EOF'
+LANG=ru_RU.UTF-8
+LC_COLLATE=C
+EOF
+
+echo "[ShevOS] Часовой пояс..."
+ln -sf /usr/share/zoneinfo/Europe/Moscow /etc/localtime
+hwclock --systohc || true
+
+echo "[ShevOS] Консольная раскладка..."
+cat > /etc/vconsole.conf <<'EOF'
+KEYMAP=ru
+FONT=cyr-sun16
+EOF
+
+echo "[ShevOS] NetworkManager, SDDM, Bluetooth, аудио..."
+systemctl enable NetworkManager.service
+systemctl enable sddm.service
+systemctl enable bluetooth.service || true
+systemctl enable qemu-guest-agent.service || true
+systemctl enable vmtoolsd.service || true
+systemctl --global enable pipewire.service pipewire-pulse.service wireplumber.service || true
+
+echo "[ShevOS] sudo для wheel..."
+sed -i 's/^# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/' /etc/sudoers || true
+
+echo "[ShevOS] Удаление live-ярлыка установщика из установленной системы..."
+rm -f /usr/share/applications/shevos-install.desktop || true
+
+echo "[ShevOS] XDG пользовательские папки будут созданы при первом входе."
+echo "[ShevOS] Готово."

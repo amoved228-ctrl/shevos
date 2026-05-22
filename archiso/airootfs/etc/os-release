@@ -1,0 +1,10 @@
+NAME="ShevOS"
+PRETTY_NAME="ShevOS Rolling"
+ID=shevos
+ID_LIKE=arch
+BUILD_ID=rolling
+ANSI_COLOR="1;36"
+HOME_URL="https://example.local"
+DOCUMENTATION_URL="https://example.local/docs"
+SUPPORT_URL="https://example.local/support"
+BUG_REPORT_URL="https://example.local/issues"

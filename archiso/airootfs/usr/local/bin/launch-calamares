@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Запускаем Calamares с root-правами через pkexec.
+# Логи сохраняются в /tmp, чтобы было проще смотреть ошибки из live-системы.
+export LANG=ru_RU.UTF-8
+export LC_ALL=ru_RU.UTF-8
+exec pkexec env LANG=ru_RU.UTF-8 LC_ALL=ru_RU.UTF-8 /usr/bin/calamares -d
